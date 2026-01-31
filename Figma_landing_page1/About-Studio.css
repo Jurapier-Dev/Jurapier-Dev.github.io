@@ -1,0 +1,169 @@
+.view_form_bottom {
+    opacity:var(--reveal_opacity);
+    transition:all .8s ease;
+    transform:translateY(20px);
+}
+header {
+    .container {
+        .head-con {
+            .head-info {
+                margin-top:2rem;
+                margin-bottom:5rem;
+                p {
+                    max-width:1000px;
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .container {
+        .services {
+            .service-con {
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap:1rem;
+                h2 {
+                    font-size:var(--big);
+                    color:var(--text_head);
+                    font-weight:100;
+                }
+                .service-wrap {
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap:1rem;
+                    .branding,.digital,.media,.visual {
+                        text-transform:uppercase;
+                        color:var(--text_info);
+                        p {
+                            color:var(--text_head);
+                            text-transform:none;
+                            font-size:0.9rem;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .review-wrap {
+            margin-top:5rem;
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            h2 {
+                font-size:var(--big);
+                font-weight:100;
+            }
+            p {
+                font-size:0.9rem;
+                margin-top:1rem;
+            }
+            .visitors,.campaign,.client {
+                padding:1rem;
+                border-right:2px solid var(--text_info);
+            }
+        }
+
+        .awards {
+            margin:2rem 0 0 0;
+            border-bottom:2px solid var(--text_info);
+            padding-bottom:4rem;
+            .award-wrap {
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                .head {
+                    font-size:var(--big);
+                    font-weight:100;
+                }
+                .info-wrap {
+                    display:grid;
+                    grid-template-columns:1fr 200px 50px;
+                    gap:1rem;
+                    cursor:pointer;
+                    border-bottom:2px solid var(--text_info);
+                    padding:1rem;
+                    .year {
+                        color:var(--text_info);
+                    }
+                }
+            }
+        }
+        .our-team {
+            padding:2rem 0;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            h2 {
+                font-size:var(--big);
+                font-weight:100;
+            }
+            .our-wrap {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                gap:1rem;
+
+                img {
+                    max-width:250px;
+                    max-height:250px;
+                    height:100%;
+                    object-fit:cover;
+                    display:block;
+                }
+                .line {
+                    border-top:2px solid var(--text_info);
+                    margin:2rem 0;
+                }
+                .job {
+                    color:var(--text_info);
+                    margin-top:10px;
+                }
+                .name {
+                    margin-top:1rem;
+                }
+                
+            }
+        }
+    }
+}
+
+@media (max-width:799px) {
+    header{
+        .container {
+            .head-con {
+                .head-info {
+                    p {
+                        font-size:var(--head);
+                    }
+                }
+            }
+        }
+    }
+    main {
+        .container {
+            .services {
+                .service-con {
+                    .service-wrap {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+            .awards {
+                .award-wrap {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .our-team {
+                grid-template-columns: 1fr;
+                .our-wrap {
+                    grid-template-columns:1fr;
+                    img {
+                        width:100%;
+                        max-width:100%;
+                        max-height:500px;
+                    }
+                }
+            }
+        }
+    }
+}
